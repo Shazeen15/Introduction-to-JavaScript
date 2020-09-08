@@ -1,24 +1,37 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
-//voting age
-
-
-
+let votingAge = 18;
+if (votingAge >= 18) {
+    console.log(true);
+} else {
+    console.log(false);
+}
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
-
-
+var myName = `Shazeen`;
+if (true) {
+    myName = `Fabius`;
+    console.log(myName);
+}
 
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
-
+let num = `1999`;
+let newNum = Number(num);
+console.log(newNum);
 
 
 
 
 //Task d: Write a function to multiply a*b 
 
+function mult(a, b) {
+    return a * b;
+}
+let result = mult(3, 3);
+
+console.log(result);
 
 
 
@@ -26,7 +39,11 @@
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
+let myAge = 27;
 
+let dogYears = Math.round(27 / 7);
+
+console.log(dogYears);
 
 
 
@@ -81,7 +98,14 @@
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-
+function annoyingSong(bottles) {
+    while (bottles > 0) {
+        let lessBottle = bottles--;
+        let newMessage = ` ${lessBottle} of beer on the wall take one down pass it arround ${bottles}`
+        console.log(newMessage);
+    }
+}
+annoyingSong(3);
 
 
 
@@ -94,8 +118,24 @@
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
+let grade = prompt(`what is your grade?`)
 
+function gradeCal(grade) {
+    if (grade >= 90) {
+        return `A`;
+    } else if (grade >= 80) {
+        return `B`
+    } else if (grade >= 70) {
+        return `C`
+    } else if (grade >= 60){
+        return `D`
+    } else {
+        return `F`
+    }
+}
 
+let finalGrade = gradeCal(grade);
+console.log(finalGrade);
 
 
 
