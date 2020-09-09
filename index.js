@@ -66,7 +66,40 @@ console.log(dogYears);
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
 
+function dogFeeder(weight, age) {
+    //adult dogs
+    if (weight > 15 && age >= 1) {
+        let food = weight * 0.02;
+        return food;
+    } 
+    else if (weight >= 11 && weight <= 15 && age >= 1 ){
+        food = weight * 0.03;
+        return food;
+    }
+    else if (weight >= 6 && weight <= 10 && age >= 1 ){
+        food = weight * 0.04;
+        return food;
+    }
+    else if (weight = 5 && age >= 1 ){
+        food = weight * 0.05;
+        return food;
+    }
 
+    //puppies
+    else if (age > 0.166667 && age < 0.333334) {
+        food = weight * 0.1;
+        return food;
+    }
+    else if (age > 0.333334 && age < 0.583334) {
+        food = weight * 0.05;
+        return food;
+    }
+    else if (age > 0.583334 && age < 1) {
+        food = weight * 0.04;
+        return food;
+    }
+}
+console.log(dogFeeder(7, 10));
 
 
 
@@ -127,7 +160,7 @@ console.log(gameResult);
 // let killo = prompt(`what is the kilometre?`);
 let killo = 23;
 
-function converteeMiles(killo){
+function converteeMiles(killo) {
     let resultMiles = Math.round(killo * 0.62137);
     return resultMiles
 }
@@ -141,12 +174,13 @@ console.log(finalResult);
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
 
 let feet = 9;
-function converterCM(feet){
-    let resultCM = Math.round(feet/0.032808);
+
+function converterCM(feet) {
+    let resultCM = Math.round(feet / 0.032808);
     return resultCM
 }
- let finalResultCM = converterCM(feet);
- console.log(finalResultCM);
+let finalResultCM = converterCM(feet);
+console.log(finalResultCM);
 
 
 
@@ -208,3 +242,4 @@ console.log(finalGrade);
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
+//Shazeen Fabius ---> see task 4
