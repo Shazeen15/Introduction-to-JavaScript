@@ -71,35 +71,34 @@ function dogFeeder(weight, age) {
     if (weight > 15 && age >= 1) {
         let food = weight * 0.02;
         return food;
-    } 
-    else if (weight >= 11 && weight <= 15 && age >= 1 ){
+    } else if (weight >= 11 && weight <= 15 && age >= 1) {
         food = weight * 0.03;
         return food;
-    }
-    else if (weight >= 6 && weight <= 10 && age >= 1 ){
+    } else if (weight >= 6 && weight <= 10 && age >= 1) {
         food = weight * 0.04;
         return food;
-    }
-    else if (weight = 5 && age >= 1 ){
+    } else if (weight = 5 && age >= 1) {
         food = weight * 0.05;
-        return food;
-    }
-
-    //puppies
-    else if (age > 0.166667 && age < 0.333334) {
-        food = weight * 0.1;
-        return food;
-    }
-    else if (age > 0.333334 && age < 0.583334) {
-        food = weight * 0.05;
-        return food;
-    }
-    else if (age > 0.583334 && age < 1) {
-        food = weight * 0.04;
         return food;
     }
 }
-console.log(dogFeeder(7, 10));
+console.log(`Adult Dog Feeder:`)
+console.log(dogFeeder(13, 10));
+
+function puppyFeeder(age) {
+    if (age > 0.166667 && age < 0.333334) {
+        food = age * 0.1;
+        return food;
+    } else if (age > 0.333334 && age < 0.583334) {
+        food = age * 0.05;
+        return food;
+    } else if (age > 0.583334 && age < 1) {
+        food = age * 0.04;
+        return food;
+    }
+}
+console.log(`Puppy Feeder:`)
+console.log(puppyFeeder(0.29));
 
 
 
@@ -112,7 +111,7 @@ console.log(dogFeeder(7, 10));
 // let options = [`rock`, `paper`, `scissors`];
 // let pcChoice = Math.floor(Math.random() * 3);
 // console.log(options[pcChoice]);
-
+console.log(`Rock Paper Scissor Game:`)
 // let userChoice = prompt(`Rock, Paper, or Scissor?`);
 let userChoice = `Rock`;
 let pcChoice = Math.floor(Math.random() * 3);
@@ -150,7 +149,6 @@ function game(userChoice, pcChoice) {
         return `It's a tie!`
     }
 }
-
 let gameResult = game(userChoice, pcChoice);
 console.log(gameResult);
 
