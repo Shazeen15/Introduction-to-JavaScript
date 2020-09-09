@@ -76,21 +76,77 @@ console.log(dogYears);
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
+// let options = [`rock`, `paper`, `scissors`];
+// let pcChoice = Math.floor(Math.random() * 3);
+// console.log(options[pcChoice]);
 
+// let userChoice = prompt(`Rock, Paper, or Scissor?`);
+let userChoice = `Rock`;
+let pcChoice = Math.floor(Math.random() * 3);
+if (pcChoice === 0) {
+    pcChoice = `Rock`;
+} else if (pcChoice === 1) {
+    pcChoice = `Paper`;
+} else {
+    pcChoice = `Scissor`;
+}
+console.log(pcChoice);
 
+function game(userChoice, pcChoice) {
+    if (userChoice === `Rock`) {
+        if (pcChoice === `Paper`) {
+            return `You Lost`
+        } else if (pcChoice === `Scissor`) {
+            return `You Win`
+        }
+    }
+    if (userChoice === `Paper`) {
+        if (pcChoice === `Scissor`) {
+            return `You Lost`
+        } else if (pcChoice === `Rock`) {
+            return `You Won`
+        }
+    }
+    if (userChoice === `Scissor`) {
+        if (pcChoice === `Rock`) {
+            return `You Lost`
+        } else if (pcChoice === `Paper`) {
+            return `You Won`
+        }
+    } else if (userChoice === pcChoice) {
+        return `It's a tie!`
+    }
+}
 
+let gameResult = game(userChoice, pcChoice);
+console.log(gameResult);
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
+// let killo = prompt(`what is the kilometre?`);
+let killo = 23;
 
+function converteeMiles(killo){
+    let resultMiles = Math.round(killo * 0.62137);
+    return resultMiles
+}
+
+let finalResult = converteeMiles(killo);
+console.log(finalResult);
 
 
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
 
-
+let feet = 9;
+function converterCM(feet){
+    let resultCM = Math.round(feet/0.032808);
+    return resultCM
+}
+ let finalResultCM = converterCM(feet);
+ console.log(finalResultCM);
 
 
 
@@ -101,7 +157,7 @@ console.log(dogYears);
 function annoyingSong(bottles) {
     while (bottles > 0) {
         let lessBottle = bottles--;
-        let newMessage = ` ${lessBottle} of beer on the wall take one down pass it arround ${bottles}`
+        let newMessage = ` ${lessBottle} bottles of beer on the wall take one down pass it arround ${bottles} bottles of beer on the wall`
         console.log(newMessage);
     }
 }
@@ -118,7 +174,8 @@ annoyingSong(3);
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
-let grade = prompt(`what is your grade?`)
+// let grade = prompt(`what is your grade?`)
+let grade = 90;
 
 function gradeCal(grade) {
     if (grade >= 90) {
@@ -127,7 +184,7 @@ function gradeCal(grade) {
         return `B`
     } else if (grade >= 70) {
         return `C`
-    } else if (grade >= 60){
+    } else if (grade >= 60) {
         return `D`
     } else {
         return `F`
