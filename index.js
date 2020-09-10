@@ -241,10 +241,11 @@ function vowels(string) {
     console.log(newString); //[a, e, i, o, u]
     newString.forEach(v => { 
         if (v === 'a' || v === 'e' || v === 'i' || v === 'o' || v === 'u'){
-            count++
+            count++;
         }});
     // newString.includes('aeiou');
     // console.log(newString.includes('e', 'o'));
+    return count;
 }
 console.log(vowels("veronu"));
 
