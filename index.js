@@ -41,9 +41,11 @@ console.log(result);
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 let myAge = 27;
 
-let dogYears = Math.round(27 / 7);
 
-console.log(dogYears);
+
+let dogYears = Math.round(27 * 7);
+
+console.log(`Age in Dog year: ${dogYears}`);
 
 
 
@@ -83,7 +85,7 @@ function dogFeeder(weight, age) {
     }
 }
 console.log(`Adult Dog Feeder:`)
-console.log(dogFeeder(13, 10));
+console.log(dogFeeder(100, 10));
 
 function puppyFeeder(age) {
     if (age > 0.166667 && age < 0.333334) {
@@ -232,6 +234,20 @@ console.log(finalGrade);
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
 // Hint - you may need to study tomorrow's traning kit on arrays 
 // try looking up the .includes() method
+
+function vowels(string) {
+    let count = 0;
+    let newString = string.toLowerCase().split("");
+    console.log(newString); //[a, e, i, o, u]
+    newString.forEach(v => { 
+        if (v === 'a' || v === 'e' || v === 'i' || v === 'o' || v === 'u'){
+            count++
+        }});
+    // newString.includes('aeiou');
+    // console.log(newString.includes('e', 'o'));
+}
+console.log(vowels("veronu"));
+
 
 
 
